@@ -1,0 +1,11 @@
+syntax: glob
+
+.DS_Store
+
+*.swp
+
+target/
+lib_managed/
+src_managed/
+project/boot/
+
