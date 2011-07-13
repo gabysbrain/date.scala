@@ -14,3 +14,5 @@ scalacOptions += "-deprecation"
 // set the Scala version used for the project
 //scalaVersion := "2.9.0.1"
 
+mainClass := Some("date.scala.Date")
+
