@@ -11,7 +11,11 @@ object Date extends Timespan {
     //val fst :: _ = parseAll(value, args(0))
   }
 
-  def string2Millis(s:String) : Long = parseAll(value, s)
+  def string2Millis(s:String) : Option[Long] = {
+    val p = parseAll(value, s)
+    if(p.successful) Some(p.get)
+    else             None
+  }
 
   def millis2Exact(m:Long) : String = HumanTime.exactly(m)
   def millis2Approx(m:Long) : String = HumanTime.approximately(m)
