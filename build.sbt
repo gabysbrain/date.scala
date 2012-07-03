@@ -1,5 +1,5 @@
 // set the name of the project
-name := "Date.scala"
+name := "datescala"
 
 version := "0.9"
 
