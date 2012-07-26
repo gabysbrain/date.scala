@@ -3,7 +3,8 @@ name := "datescala"
 
 version := "0.9"
 
-scalaVersion := "2.8.1"
+//scalaVersion := "2.8.1"
+crossScalaVersions := Seq("2.8.0", "2.8.1", "2.9.1", "2.9.2")
 
 organization := "org.bitbucket.gabysbrain"
 
@@ -12,15 +13,16 @@ licenses := Seq("BSD-style" -> url("http://www.opensource.org/licenses/bsd-licen
 homepage := Some(url("https://bitbucket.org/gabysbrain/date.scala"))
 
 // add a test dependency on ScalaCheck
-libraryDependencies += "org.scala-tools.testing" %% "scalacheck" % "1.8" % "test"
+//libraryDependencies += "org.scala-tools.testing" %% "scalacheck" % "1.8" % "test"
 
-libraryDependencies += "org.scala-lang" % "scala-swing" % "2.8.1"
+//libraryDependencies <+= "org.scala-lang" % "scala-swing" % scalaVersion
+//libraryDependencies <+= "org.scala-lang" % "scala-swing" % crossScalaVersionString
+libraryDependencies <<= (scalaVersion, libraryDependencies) {(sv, deps) =>
+  deps :+ ("org.scala-lang" % "scala-swing" % sv)
+}
 
 // append -deprecation to the options passed to the Scala compiler
 scalacOptions += "-deprecation"
-
-// set the Scala version used for the project
-//scalaVersion := "2.9.0.1"
 
 // Sonatype publishing settings
 publishMavenStyle := true
