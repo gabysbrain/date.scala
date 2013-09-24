@@ -55,3 +55,5 @@ pomExtra := (
 
 mainClass := Some("date.scala.Date")
 
+useGpg := true
+
