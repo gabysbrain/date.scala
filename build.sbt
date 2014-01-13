@@ -5,7 +5,7 @@ version := "0.9"
 
 crossScalaVersions := Seq("2.8.1", "2.9.1", "2.9.2", "2.10.2", "2.10.3")
 
-organization := "org.bitbucket.gabysbrain"
+organization := "com.tomtorsneyweir"
 
 licenses := Seq("BSD-style" -> url("http://www.opensource.org/licenses/bsd-license.php"))
 
@@ -22,9 +22,9 @@ scalacOptions += "-deprecation"
 // Sonatype publishing settings
 publishMavenStyle := true
 
-publishTo <<= version { (v:String) =>
+publishTo := {
   val nexus = "https://oss.sonatype.org/"
-  if(v.trim.endsWith("SNAPSHOT"))
+  if (isSnapshot.value)
     Some("snapshots" at nexus + "content/repositories/snapshots")
   else
     Some("releases"  at nexus + "service/local/staging/deploy/maven2")
