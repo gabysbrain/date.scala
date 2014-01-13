@@ -3,19 +3,15 @@ name := "datescala"
 
 version := "0.9"
 
-crossScalaVersions := Seq("2.8.0", "2.8.1", "2.9.1", "2.9.2", "2.10.2")
+crossScalaVersions := Seq("2.8.0", "2.8.1", "2.9.1", "2.9.2", "2.10.2", "2.10.3")
 
 organization := "org.bitbucket.gabysbrain"
 
 licenses := Seq("BSD-style" -> url("http://www.opensource.org/licenses/bsd-license.php"))
 
-homepage := Some(url("https://bitbucket.org/gabysbrain/date.scala"))
+homepage := Some(url("https://github.com/gabysbrain/date.scala"))
 
 // add a test dependency on ScalaCheck
-//libraryDependencies += "org.scala-tools.testing" %% "scalacheck" % "1.8" % "test"
-
-//libraryDependencies <+= "org.scala-lang" % "scala-swing" % scalaVersion
-//libraryDependencies <+= "org.scala-lang" % "scala-swing" % crossScalaVersionString
 libraryDependencies <<= (scalaVersion, libraryDependencies) {(sv, deps) =>
   deps :+ ("org.scala-lang" % "scala-swing" % sv)
 }
@@ -41,9 +37,9 @@ pomIncludeRepository := { _ => false }
 
 pomExtra := (
   <scm>
-    <url>git@bitbucket.org:gabysbrain/date.scala.git</url>
-    <connection>scm:git:git@bitbucket.org:gabysbrain/date.scala.git</connection>
-    <developerConnection>scm:git:git@bitbucket.org:gabysbrain/date.scala.git</developerConnection>
+    <url>git@github.com:gabysbrain/date.scala.git</url>
+    <connection>scm:git:git@github.com:gabysbrain/date.scala.git</connection>
+    <developerConnection>scm:git:git@github.com:gabysbrain/date.scala.git</developerConnection>
   </scm>
   <developers>
     <developer>
