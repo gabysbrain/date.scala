@@ -3,7 +3,7 @@ name := "datescala"
 
 version := "0.9"
 
-crossScalaVersions := Seq("2.8.0", "2.8.1", "2.9.1", "2.9.2", "2.10.2", "2.10.3")
+crossScalaVersions := Seq("2.8.1", "2.9.1", "2.9.2", "2.10.2", "2.10.3")
 
 organization := "org.bitbucket.gabysbrain"
 
