@@ -1,6 +1,6 @@
-package org.bitbucket.gabysbrain.datescala
+package com.tomtorsneyweir.datescala
 
-import org.bitbucket.gabysbrain.datescala.grammar.Timespan
+import com.tomtorsneyweir.datescala.grammar.Timespan
 import com.eaio.util.text.HumanTime
 import scala.util.parsing.combinator._
 

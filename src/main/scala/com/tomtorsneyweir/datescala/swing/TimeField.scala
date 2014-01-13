@@ -1,6 +1,6 @@
-package org.bitbucket.gabysbrain.datescala.swing
+package com.tomtorsneyweir.datescala.swing
 
-import org.bitbucket.gabysbrain.datescala.Date
+import com.tomtorsneyweir.datescala.Date
 
 import scala.swing.TextField
 

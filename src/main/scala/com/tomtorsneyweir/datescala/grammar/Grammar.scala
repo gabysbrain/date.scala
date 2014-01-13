@@ -1,4 +1,4 @@
-package org.bitbucket.gabysbrain.datescala.grammar
+package com.tomtorsneyweir.datescala.grammar
 
 import scala.util.parsing.combinator._
 
