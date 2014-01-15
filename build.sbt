@@ -1,7 +1,7 @@
 // set the name of the project
 name := "datescala"
 
-version := "0.9"
+//version := "0.9"
 
 crossScalaVersions := Seq("2.8.1", "2.9.1", "2.9.2", "2.10.2", "2.10.3")
 
@@ -52,4 +52,7 @@ pomExtra := (
 mainClass := Some("date.scala.Date")
 
 useGpg := true
+
+// Release settings
+releaseSettings
 
