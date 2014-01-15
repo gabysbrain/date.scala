@@ -1,3 +1,8 @@
+import DateScalaReleaseSteps._
+import sbtrelease._
+import ReleaseStateTransformations._
+import ReleaseKeys._
+
 // set the name of the project
 name := "datescala"
 
@@ -55,4 +60,17 @@ useGpg := true
 
 // Release settings
 releaseSettings
+
+releaseProcess := Seq[ReleaseStep](
+  checkSnapshotDependencies,
+  inquireVersions,
+  runTest,
+  setReleaseVersion,
+  commitReleaseVersion,
+  tagRelease,
+  publishArtifacts.copy(action = publishSignedAction),
+  setNextVersion //,
+  commitNextVersion,
+  pushChanges
+)
 
