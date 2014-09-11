@@ -1,0 +1,19 @@
+
+apply plugin 'scala'
+
+version = "0.9"
+
+ext {
+  scalaVersion = '2.10'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.scala-lang:scala-library:2.10.3'
+  compile 'org.scala-lang:scala-swing:$scalaVersion'
+}
+
+defaultTasks 'build'
